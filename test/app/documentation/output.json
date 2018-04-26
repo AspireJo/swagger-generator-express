@@ -1,0 +1,340 @@
+{
+  "swagger": "2.0",
+  "basePath": "/api/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "host": "aspire.jo",
+  "tags": [
+    {
+      "name": "User",
+      "description": "User management endpoints"
+    },
+    {
+      "name": "Tests",
+      "description": "Test cases endpoints"
+    }
+  ],
+  "info": {
+    "version": "0.0.1",
+    "title": "@aspirejo/swagger-generator-express",
+    "description": "Swagger document generator for NodeJs express application"
+  },
+  "paths": {
+    "/v1/inline": {
+      "get": {
+        "tags": [
+          "Tests"
+        ],
+        "description": "Get inline response",
+        "responses": {
+          "200": {
+            "description": "Get inline response Succeed",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "prop1": {
+                  "type": "string",
+                  "description": "this is first property"
+                },
+                "prop2": {
+                  "type": "boolean",
+                  "description": "this is sec property"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Get inline response Failed",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/v1/int": {
+      "get": {
+        "tags": [
+          "Tests"
+        ],
+        "description": "Get int response",
+        "responses": {
+          "200": {
+            "description": "Get int response Succeed",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "type": "integer"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Get int response Failed",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/v2/int": {
+      "get": {
+        "tags": [
+          "Tests"
+        ],
+        "description": "Get int response",
+        "responses": {
+          "200": {
+            "description": "Get int response Succeed",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "type": "integer"
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Get int response Failed",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "auth token",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1/users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Get user info",
+        "responses": {
+          "200": {
+            "description": "Get user info Succeed",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "description": "User id"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "User email address"
+                },
+                "firstName": {
+                  "type": "string",
+                  "description": "User first name"
+                },
+                "lastName": {
+                  "type": "string",
+                  "description": "User last name"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Get user info Failed",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/v1/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Get users list",
+        "responses": {
+          "200": {
+            "description": "Get users list Succeed",
+            "schema": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "description": "User id"
+                      },
+                      "email": {
+                        "type": "string",
+                        "description": "User email address"
+                      },
+                      "firstName": {
+                        "type": "string",
+                        "description": "User first name"
+                      },
+                      "lastName": {
+                        "type": "string",
+                        "description": "User last name"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "204": {
+            "description": "No content",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized",
+            "schema": {
+              "properties": {
+                "code": {
+                  "type": "number"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Get users list Failed",
+            "schema": {
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "description": "skip the first {offset} records",
+            "type": "integer",
+            "required": false,
+            "name": "offset",
+            "in": "query"
+          },
+          {
+            "description": "getting {limit} records after the skipped {offset}",
+            "type": "integer",
+            "required": false,
+            "name": "limit",
+            "in": "query"
+          }
+        ]
+      }
+    }
+  }
+}

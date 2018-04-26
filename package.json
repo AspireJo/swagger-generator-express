@@ -1,0 +1,48 @@
+{
+  "name": "@aspirejo/swagger-generator-express",
+  "version": "0.1.0",
+  "description": "Swagger document generator for NodeJs express application",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./docs,./README.md --copy-files",
+    "start": "npm run build && node dist/index.js",
+    "test": "mocha --require babel-core/register \"./test/**/*.spec.js\"",
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require babel-register --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AspireJo/swagger-generator-express.git"
+  },
+  "keywords": [
+    "Aspire",
+    "swagger",
+    "documentation",
+    "generate",
+    "OAI",
+    "OpenApi"
+  ],
+  "author": "AspireJo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AspireJo/swagger-generator-express/issues"
+  },
+  "homepage": "https://github.com/AspireJo/swagger-generator-express#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.1.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "glob-promise": "^3.4.0",
+    "jsdoc-api": "^4.0.3",
+    "lodash": "^4.17.5",
+    "yamljs": "^0.3.0"
+  }
+}

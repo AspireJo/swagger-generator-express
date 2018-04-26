@@ -226,7 +226,7 @@ Default response codes
 ```
 
 ## Adding documentation to code
-See [generator](docs/generator.md)
+See [generator](generator.md)
 
 ## Adding new endpoint
-See [new-endpoint](docs/new-endpoint.md)
+See [new-endpoint](new-endpoint.md)

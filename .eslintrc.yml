@@ -1,0 +1,29 @@
+extends: airbnb-base
+globals:
+  cache: true
+  concurrencyLimit: true
+  logger: true
+  # testing vars
+  describe : true
+  it: true
+  before: true
+  after : true
+  GEN_OUTPUT: true
+  ERR_OUTPUT: true
+plugins:
+- import
+rules:
+  max-len:
+  - 2
+  - code: 180
+    ignoreUrls: true
+  no-multiple-empty-lines:
+  - error
+  - max: 1
+    maxBOF: 0
+    maxEOF: 1
+  no-restricted-properties: 'off'
+  comma-dangle: 'off'
+  object-curly-newline: 'off'
+  no-console : 'off'
+  no-unused-expressions: 'off'
