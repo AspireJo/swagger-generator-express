@@ -88,7 +88,8 @@ An object contains the globbing pattern for models, schemas and controllers, it 
 
 A function to resolve controller name into a method and a version.
 
-Signture
+Signature
+
 `controllerInfoResolver(fileName) => ({ method , version })`
 
 Expected returned object
