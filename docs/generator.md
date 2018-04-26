@@ -68,6 +68,7 @@ To define a returned object structure without creating a model class for it, the
 > Inline object structure supports only one level with primitive types `integer`, `string`, `number` and `boolean`
 
 **`property`**
+
 |Property|Used for|Info|
 |--|--|--|
 |tags|End point tags|required, comma seperated|
