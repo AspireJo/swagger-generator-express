@@ -57,6 +57,7 @@ generator.generate(config);
 > required
 
 An object contains the description of the OpenAPI specifications for the APIs
+
 |key|type|default value|
 |--|--|--|
 |swagger|`string`|2.0|
