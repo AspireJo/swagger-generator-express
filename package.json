@@ -2,7 +2,7 @@
   "name": "@aspirejo/swagger-generator-express",
   "version": "0.1.0",
   "description": "Swagger document generator for NodeJs express application",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./docs,./README.md --copy-files",
     "start": "npm run build && node dist/index.js",
