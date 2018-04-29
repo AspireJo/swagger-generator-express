@@ -14,7 +14,7 @@ A controller file name must have a pattern that can be used to identify both met
 
 ## Install
 
-> `npm install @aspirejo/swagger-denerator-express`
+> `npm install @aspirejo/swagger-generator-express`
 
 ## Usage
 
